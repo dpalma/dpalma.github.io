@@ -1,0 +1,18 @@
+.navbar {
+
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.navbar ul li {
+  float: left;
+}
+
+.navbar ul li a {
+  text-decoration:none;
+  font-size: 1.5em;
+  padding-right:5px;
+  color:rgba(255,0,180,0.5);
+}
