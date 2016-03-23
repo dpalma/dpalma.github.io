@@ -1,7 +1,8 @@
---
-layout post
-title Testable ORM in Android with the Repository Pattern
---
+---
+layout: post
+title: Testable ORM in Android with the Repository Pattern
+category: Android
+---
 * Test data pollutes real data used for manual testing
 ** No good way to switch between test and production databases
 ** Reverting a single transaction would be impractical

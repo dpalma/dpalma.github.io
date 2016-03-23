@@ -1,18 +1,8 @@
-.navbar {
-
+body {
+  padding-top: 70px;
+  /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
-.navbar ul {
-  list-style: none;
-}
-
-.navbar ul li {
-  float: left;
-}
-
-.navbar ul li a {
-  text-decoration:none;
-  font-size: 1.5em;
-  padding-right:5px;
-  color:rgba(255,0,180,0.5);
+.nav > li > .fa-icon-link {
+  padding: 15px 5px 15px 5px;
 }
