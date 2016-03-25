@@ -1,2 +1,4 @@
 name: Dan Palma
 paginate: 5
+excerpt_separator: <!--more-->
+permalink: none
