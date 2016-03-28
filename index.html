@@ -6,7 +6,7 @@ title: Daniel Palma
   <div class="row">
     <div class="col-lg-12">
       <h2>{{ post.title }}</h2>
-      {{ post.excerpt }}
+      {{ post.excerpt | strip_html }}
       <a href="{{ post.url }}">Read more...</a>
     </div>
   </div>
