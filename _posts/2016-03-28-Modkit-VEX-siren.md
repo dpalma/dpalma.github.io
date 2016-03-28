@@ -10,7 +10,7 @@ comments: yes
 This project uses the VEX &quot;TouchLED&quot; sensor and a [ModKit for VEX](https://www.modkit.com/vex/editor)
 program to implement a simple siren.
 This activity is intended for elementary-aged kids to complete in a one hour session.
-<!--more-->
+<!--more--> It was developed for the robotics club at the Barbieri Elementary School in Framingham, MA.
 
 Kids love using noise and light features.
 I like that the project includes loops and a &quot;break&quot;, which can be hard to
