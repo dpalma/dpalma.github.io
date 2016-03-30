@@ -22,8 +22,8 @@ Test data is left behind, obscuring whatever user-created data might have been p
 The Repository pattern encapsulates the create, read, update, and delete operations
 for storing and retrieving data objects to and from the database. Using a
 repository instance for all database interactions allows us to introduce mock
-repositories for testing. The logic of such code can be tested without actually
-modifying the database.
+repositories for testing. With a mock repository, the logic of such code can be
+tested without actually modifying the database.
 
 The code below is a Repository interface built for the [SugarORM](http://satyan.github.io/sugar/)
 library for Android. Examples of mock implementations and tests that use them can be seen [here](https://github.com/dpalma/lineup-shaker/tree/master/app/src/androidTest/java/net/danielpalma/lineupshaker).
