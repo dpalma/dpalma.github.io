@@ -10,10 +10,22 @@ body {
 }
 
 .post-title {
+  font-size: 1.6em;
+  padding-top: .75em;
+  padding-bottom: .25em;
 }
 
 .post-text {
   margin-left: 2px;
+}
+
+.img-responsive {
+  max-width: 50%;
+  max-heigh: auto;
+}
+
+.sidebar-title {
+  font-size: larger;
 }
 
 /* Bootstrap theme classes */
