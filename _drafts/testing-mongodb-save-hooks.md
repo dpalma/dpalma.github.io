@@ -1,9 +1,39 @@
 ---
 layout: post
-title: Testing MongoDB save hooks
-category: nodejs
+title: Unit-testing MongoDB models with save hooks
+category: NodeJS
 comments: yes
 ---
+
+Data model classes with address fields may well use a geocoder, such as the Google Maps API, to get the latitude/longitude coordinates of a given address. These coordinates are vital to applications like store locators. In a Mongo model, a save hook can keep the coordinates in sync with any changes to the address fields. This post will demonstrate one way to compose the schema, model, and test so that the save hook can be mocked during unit tests.
+<!-- more -->
+
+Consider a test like the following:
+
+```javascript
+describe("StoreLocation model", function() {
+  it("fills in the geo location fields", function(done) {
+    StoreLocation.create({
+      date: faker.date.future(),
+      notes: faker.lorem.words(),
+      address: {
+        name: "Some Place",
+        street: "1 Main St",
+        city: "Boston",
+        state: "MA"
+      }
+    }).then((storeLoc) => {
+      expect(storeLoc.location.type).to.equal("Point");
+      expect(storeLoc.location.coordinates[0]).to.equal(-71.011754);
+      expect(storeLoc.location.coordinates[1]).to.equal(42.381862);
+      storeLoc.remove().then(function() { done() });
+    });
+  });
+});
+```
+
+Assuming 
+
 
 # Unit-Testing Mongo Models with Save Hooks
 
