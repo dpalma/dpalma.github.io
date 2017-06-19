@@ -10,6 +10,14 @@ Promises can be difficult to work with at first. It is easy to go down a wrong p
 
 Shown below is the GET handler for a RESTful controller that serves up a single individual listing. Multiple listings are handled in a separate controller. A listing posted by a given user will have that user&apos;s ID in its &quot;postedBy&quot; field. A listing that originates from the system or some other source will have no &quot;postedBy&quot; field. Conditional logic like this can be tricky to implement with Promises and that&apos;s how things started to go wrong for this code.
 
+The API requirements for this handler are as follows:
+
+- Take a listing id argument as a URL parameter
+  - Report a bad request error if the id is improperly formatted
+- Look up that listing
+  - If the listing is not found report that error
+- If the listing has a postedBy, look up that user
+
 First, it uses both a regular Javascript try-catch block, and a Promise-style catch handler.
 
 Second, it creates a new Promise within the handler of a previous Promise, which causes [this warning](http://bluebirdjs.com/docs/warning-explanations.html#warning-a-promise-was-created-in-a-handler-but-was-not-returned-from-it).
@@ -19,7 +27,7 @@ Listing 1: First try
 ListingController.prototype.get = function(req, res) {
   let models = this.models, logger = this.logger;
   try {
-    var id = new mongoose.Types.ObjectId(req.params.gameid);
+    var id = new mongoose.Types.ObjectId(req.params.listingid);
     var result;
     models.Listing.findById(id).then(function(listing) {
       if (listing) {
@@ -87,3 +95,5 @@ ListingController.prototype.get = function(req, res) {
   })
 }
 {% endhighlight %}
+
+Is listing two still not good enough? Have thoughts for further improvement? Let me know in the comments!
