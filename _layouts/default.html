@@ -3,26 +3,14 @@
 	<head>
 		<title>{{ page.title }}</title>
 		{%include cdn-css.html %}
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
 	</head>
 	<body>
 		{% include navbar.html %}
 
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-9">
+				<div class="col">
 					{{content}}
-				</div>
-				<div class="col-sm-3 hidden-xs">
-					<div class="row">
-						<img class="img-responsive" src="assets/profile.png">
-					</div>
-					<div class="row sidebar-title">
-						Daniel Palma
-					</div>
-					<div class="row">
-						Professional software engineer,<br>amateur everything else
-					</div>
 				</div>
 			</div>
 		</div>

@@ -2,28 +2,36 @@
 layout: default
 title: Daniel Palma
 ---
-{% for post in paginator.posts %}
+<div>
   <section>
-    <div class="post-title">{{ post.title }}</div>
-    <div class="post-text">
-      {{ post.excerpt | strip_html }}
-      <a href="{{ post.url }}">Read more&hellip;</a>
-    </div>
+    <h4>Qualifications</h4>
+    <h5>Versatile software engineer with professional experience applying sound software design techniques to a variety of platforms and technology stacks</h5>
+    <ul>
+      <li>Multi-platform software development in C++ with STL, Boost, and OS-specific technologies X11, Cocoa, and the Windows SDK</li>
+      <li>Windows application development with C++, MFC, C#, and .NET</li>
+      <li>Full-stack web site development using JavaScript, CSS, Node, and related technologies</li>
+      <li>Application development and data processing with MATLAB</li>
+    </ul>
   </section>
-{% endfor %}
-
-{% if paginator.total_pages > 1 %}
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
-    {% else %}
-      <span class="previous">Previous</span>
-    {% endif %}
-    <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-    {% else %}
-      <span class="next ">Next</span>
-    {% endif %}
-  </div>
-{% endif %}
+  <section>
+    <h4>Work Experience</h4>
+    <h5>Mathworks, Natick, MA, 8/2013 – Present</h5>
+    <li>Designed and implemented several new features for the MATLAB app-building ecosystem</li>
+    <li>Contributed at all levels of the MATLAB software stack from view-level changes in JavaScript, HTML, and CSS to native-code for Windows, Linux, and MacOS</li>
+    <li>Supported internal teams and external customers developing MATLAB-based apps, providing suggestions, guidance, and software fixes when needed</li>
+    <li>Coached web-focused programmer teammates in C++ programming</li>
+    <h5>Autodesk, Waltham, MA, 1/2005 – 1/2013</h5>
+    <li>Led feature development for the measuring capabilities of Autodesk Revit</li>
+    <li>Provided Windows system and GUI programming expertise to several functional areas, including generation of preview images for 3D models, rule-based view customization, and the public API for rendering materials</li>
+    <li>Guided the development efforts of junior programmers, providing task definitions, code reviews, and overall mentoring</li>
+    <h5>IBM Lotus, Westford, MA, 5/2002 – 1/2005</h5>
+    <li>Designed and implemented the e-mail folder system for Lotus Workplace Messaging</li>
+    <li>Helped integrate IBM’s acquisition of FlowBuilder to become the visual form designer for Lotus Workplace</li>
+    <h5>Buzzpad, Wellesley Hills, MA, 6/2000 – 3/2002</h5>
+    Teamed with other Looking Glass Studios alumni in a peer-to-peer technology startup, designing software architecture, programming, and handling release management responsibilities
+    <h5>Looking Glass Studios, Cambridge, MA, 11/1999 – 5/2000</h5>
+    Analyzed requirements and authored use cases for the Thief series’ world-building tools
+    <h5>IBM Lotus, Cambridge, MA, 6/1996 – 11/1999</h5>
+    Started career as a C++ programmer on the Lotus Organizer product team
+  </section>
+</div>
